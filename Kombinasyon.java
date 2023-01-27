@@ -3,18 +3,15 @@ package Donguler;
 import java.util.Scanner;
 
 public class Kombinasyon {
-    /*Kombinasyon formülü
-C(n,r) = n! / (r! * (n-r)!)*/
     public static void main(String[] args) {
         int n, r;
         Scanner inp = new Scanner(System.in);
 
-        System.out.println("Kümedeki eleman sayısını giriniz: ");
+        System.out.print("Kümedeki eleman sayısını giriniz : ");
         n = inp.nextInt();
-        System.out.println("Grupların kaç elemanlı olacağını giriniz: ");
+        System.out.print("Grupların kaç elemanlı olacağını giriniz : ");
         r = inp.nextInt();
-
-        int x = (n - r);
+        
         int factorialN = 1;
         int factorialR = 1;
         int factorialF = 1;
@@ -25,7 +22,7 @@ C(n,r) = n! / (r! * (n-r)!)*/
         for (int i = 1; i <= r; i++) {
             factorialR *= i;
         }
-        for (int i = 1; i <= x; i++) {
+        for (int i = 1; i <= (n-r); i++) {
             factorialF *= i;
 
         }
